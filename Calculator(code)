@@ -1,0 +1,34 @@
+//Simple calculator to perform basic calculations on users instructions.
+
+#include<stdio.h>
+int main()
+{
+int a,b,choice;
+printf("Enter your choice number from the following.\n");
+printf("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division(quotient)\n5. Division(remainder)\n");
+scanf("%d",&choice);
+
+if(choice > 5)
+{
+    printf("Enter the choice number as specified!!");
+}
+else
+{
+    printf("Enter any two integer numbers of your choice.");
+    scanf("%d %d",&a,&b);
+}
+switch(choice)
+{
+    case 1:printf("Sum of %d and %d is: %d\n",a,b,(a+b));
+           break;
+    case 2:printf("Subtracting %d from %d we get: %d\n",b,a,(a-b));
+           break;
+    case 3:printf("Product of the numbers %d & %d is: %d\n",a,b,(a*b));
+           break;
+    case 4:printf("Quotient obtained after division of %d from %d is: %d\n",a,b,(a/b));
+           break;
+    case 5:printf("Remainder obtained after division of %d from %d is: %d\n",a,b,(a%b));
+           break;                            
+}
+return 0;
+}
